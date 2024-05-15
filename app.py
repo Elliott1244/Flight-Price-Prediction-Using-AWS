@@ -294,14 +294,9 @@ preprocessor = Pipeline(steps=[
 
 # read the training data
 
-path = r'C:\Users\harsh\OneDrive\Desktop\Flight-Price-Prediction\data\train.csv'
-
-train = pd.read_csv(path)
-
-
+train = pd.read_csv('train.csv')
 X_train = train.drop(columns = 'price')
 Y_train = train.price.copy()
-
 
 # Fit and save the preprocessor
 preprocessor.fit(X_train,Y_train)
